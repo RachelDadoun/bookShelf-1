@@ -16,7 +16,22 @@ function reset(e){
 	document.getElementById('score').value = "";
 }
 
-/*function search(){*/
+window.onload = function() {
+    // Look for input box and insert key handler
+    var prevTxt = null;
+    var txt = document.getElementsById('searchName');
+    if ( txt != null ) {
+        txt[0].onkeyup=function(event) {
+            var e = event || window.event;
+            var curTxt = txt[0].value;
+            handleKeyPress(prevTxt,curTxt);
+            prevTxt = curTxt;
+            return true;
+        }
+    }
+}
+
+function search(){
 window.onload = function() {
 	clearList();
 	var searchResults = [];
