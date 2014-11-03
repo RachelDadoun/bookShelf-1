@@ -36,7 +36,18 @@ function searchIt(){
 			searchResults.push(booksArray[i]);	
 		}
 	}
+	if (searchResults.length > 0)
+	{
 	buildListFromArray(searchResults);
+	}
+	else
+	{
+	 var noFoundDiv =  document.createElement("div");
+	 noFoundDiv.innerHTML = " NO RESULT ...";
+	 noFoundDiv.style.color = "red";
+	 /*zdsda*/
+	}
+	}
 }
 
 function buildListFromArray(searchResults) {
