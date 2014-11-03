@@ -48,7 +48,6 @@ function searchIt(){
 	 nf = document.getElementById('notF');
 	 nf.appendChild(noFoundDiv);
 	}
-	}
 }
 
 function buildListFromArray(searchResults) {
