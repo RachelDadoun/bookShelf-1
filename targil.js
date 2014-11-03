@@ -29,7 +29,10 @@ function searchIt(){
 	var searchResults = [];
 	var nameToSearchFor = document.getElementById("searchName").value;
 	for (var i=0;i<booksArray.length;i++) {
-		if (booksArray[i].indexOf(nameToSearchFor) > -1) {
+		if ((booksArray[i].bookName.indexOf(nameToSearchFor) > -1) ||
+		    (booksArray[i].authorName.indexOf(nameToSearchFor) > -1) ||
+		    (booksArray[i].score.indexOf(nameToSearchFor) > -1) )
+		    {
 			searchResults.push(booksArray[i]);	
 		}
 	}
