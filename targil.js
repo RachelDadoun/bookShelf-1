@@ -45,7 +45,8 @@ function searchIt(){
 	 var noFoundDiv =  document.createElement("div");
 	 noFoundDiv.innerHTML = " NO RESULT ...";
 	 noFoundDiv.style.color = "red";
-	 /*zdsda*/
+	 nf = document.getElementById('notF');
+	 nf.appendChild(noFoundDiv);
 	}
 	}
 }
