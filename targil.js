@@ -16,7 +16,8 @@ function reset(e){
 	document.getElementById('score').value = "";
 }
 
-function search(){
+/*function search(){*/
+window.onload = function() {
 	clearList();
 	var searchResults = [];
 	var nameToSearchFor = document.getElementById("searchName").value;
