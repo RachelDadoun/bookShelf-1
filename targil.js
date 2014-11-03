@@ -36,17 +36,15 @@ function searchIt(){
 			searchResults.push(booksArray[i]);	
 		}
 	}
+	nf = document.getElementById('notF');
 	if (searchResults.length > 0)
 	{
+	nf.style.display= "none";
 	buildListFromArray(searchResults);
 	}
 	else
 	{
-	 var noFoundDiv =  document.createElement("div");
-	 noFoundDiv.innerHTML = " NO RESULT ...";
-	 noFoundDiv.style.color = "red";
-	 nf = document.getElementById('notF');
-	 nf.appendChild(noFoundDiv);
+	 nf.style.display= "inline-block";
 	}
 }
 
