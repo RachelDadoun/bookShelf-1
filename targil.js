@@ -1,4 +1,3 @@
-
 window.onload = function() {
     // Look for input box and insert key handler
     var prevTxt = null;
