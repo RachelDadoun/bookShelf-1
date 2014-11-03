@@ -1,19 +1,3 @@
-window.onload = function() {
-    // Look for input box and insert key handler
-    var prevTxt = null;
-    var txt = document.getElementsById('searchName');
-    if ( txt != null ) {
-        txt[0].onkeyup=function(event) {
-            var e = event || window.event;
-            var curTxt = txt[0].value;
-            handleKeyPress(prevTxt,curTxt);
-            prevTxt = curTxt;
-            return true;
-        }
-    }
-}
-
-
 function Book (bookName, authorName, score) {
 	this.bookName = bookName;
 	this.authorName = authorName;
@@ -25,16 +9,22 @@ var currentAuthorName;
 var currentScore;
 
 var booksArray = [];
-
+var tOut=true;
 function reset(e){
 	document.getElementById('bookName').value = "";
 	document.getElementById('authorName').value = "";
 	document.getElementById('score').value = "";
 }
 
-
 function search(){
-window.onload = function() {
+if (tOut)
+{
+clearTimeout(tOut);	
+}
+tOut = setTimeout(function(){searchIt(), 3000);
+}
+
+function searchIt(){
 	clearList();
 	var searchResults = [];
 	var nameToSearchFor = document.getElementById("searchName").value;
