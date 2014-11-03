@@ -21,7 +21,7 @@ if (tOut)
 {
 clearTimeout(tOut);	
 }
-tOut = setTimeout(function(){searchIt()}, 500);
+tOut = setTimeout(searchIt, 500);
 }
 
 function searchIt(){
