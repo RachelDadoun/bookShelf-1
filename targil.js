@@ -160,6 +160,9 @@ function addToList(book) {
 		var scoreDiv = document.createElement("div");
 		scoreDiv.innerHTML = book.score;
 		scoreDiv.className = "right";
+		var a = document.createElement("a");
+		a.innerHTML = "book details";
+		a.setAttribute("href", "BookDetails.html?name=" + book.bookName);
 		var x = document.createElement("span");
 		x.innerHTML = "X";
 		//x.onclick = removeItem;
