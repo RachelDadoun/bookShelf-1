@@ -13,14 +13,7 @@
   var a = JSON.parse(localStorage.getItem("ddddd"));
   
   for (var key in a) {
-           var obj = a[key];
-           for (var prop in obj) {
-              if (obj.prop = url.name){return obj}else{return""}
-           }
-        }
-  
-  
-  
+           if ((a[key] == url.name)&& (key ==="name")){return obj}else{return""}
   }
   
   url = urlStrToObj(location.search);
