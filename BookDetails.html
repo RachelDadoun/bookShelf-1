@@ -1,12 +1,35 @@
 <html>
 <head>
 <script>
-  str =   window.location.search;
+  function urlStrToObj(){
   str = str.replace("?", "{\"");
   str = str.split("=").join("\":\"").split("&").join("\",\"");
   str = str.concat("\"}");
   urlObj = JSON.parse(str);
   console.log(urlObj);
+    return urlObj;
+  }
+  function searchBookName(url){
+  var a = JSON.parse(localStorage.getItem(ddddd));
+  
+  for (var key in a) {
+           var obj = a[key];
+           for (var prop in obj) {
+              if (obj.prop = url.name){return obj}
+           }
+        }
+  
+  
+  
+  }
+  }
+  url = urlStrToObj(location.search);
+  bookO = searchBookName(url.name);
+  document.getElementById("title"),innerHTML = bookO.name;
+  document.getElementById("author"),innerHTML = bookO.author;
+  document.getElementById("description"),innerHTML = bookO.descr;
+  
+  
 </script>
 </head>
 <body>
