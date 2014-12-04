@@ -2,9 +2,9 @@
 <head>
 <script>
   str =   window.location.search;
-  str.replace("?", "{\"");
+  str = str.replace("?", "{\"");
   str.split("=").join("\",\"").split("&").join("\",\"");
-  str.contact("\"}");
+  str = str.contact("\"}");
   urlObj = JSON.parse(str);
   console.log(urlObj);
 </script>
