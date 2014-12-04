@@ -4,7 +4,7 @@
   str =   window.location.search;
   str = str.replace("?", "{\"");
   str.split("=").join("\",\"").split("&").join("\",\"");
-  str = str.conact("\"}");
+  str = str.concat("\"}");
   urlObj = JSON.parse(str);
   console.log(urlObj);
 </script>
