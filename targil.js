@@ -175,6 +175,7 @@ function addToList(book) {
 		newElement.appendChild(bookNameDiv);
 		newElement.appendChild(authorNameDiv);
 		newElement.appendChild(scoreDiv);
+		newElement.appendChild(a);
 		newElement.appendChild(edit);
 		newElement.appendChild(x);
 		var ul = document.getElementById("bookList");
