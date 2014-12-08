@@ -18,7 +18,6 @@ ul#bookList li div {
 
 ul {
 	list-style-type: none;
-	width: 600px;
 }
 
 ul#bookList li  {
@@ -28,14 +27,14 @@ ul#bookList li  {
 
 @media screen and (min-width : 320px) and (max-width : 480px)  {
 ul {
-	width: 10%;
+	width: 50%;
 }
 	
 }
 
 @media screen and (min-width : 480px) and (max-width : 1024px)  {
 ul {
-	width: 20%;
+	width: 50%;
 }
 	
 }
